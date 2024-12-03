@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel # type: ignore
 
 # 1 - Base
 class ItemBase(BaseModel):

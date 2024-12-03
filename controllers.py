@@ -1,8 +1,8 @@
-from sqlalchemy.orm import Session
-from sqlalchemy import Boolean, cast
+from sqlalchemy.orm import Session # type: ignore
+from sqlalchemy import Boolean, cast # type: ignore
 from schema import ItemCreate
 from model import Item
-from fastapi import HTTPException
+from fastapi import HTTPException # type: ignore
 
 def create_item(item: ItemCreate, db: Session):
     db_item = Item(**item.model_dump())

@@ -1,10 +1,10 @@
-from fastapi import FastAPI, Depends, HTTPException
+from fastapi import FastAPI, Depends # type: ignore
 from typing import List
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session # type: ignore
 from database import engine, Base, get_db
 from schema import ItemCreate, ItemResponse
 from controllers import create_item, read_item, read_items, update_item, delete_item
-from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware # type: ignore
 
 Base.metadata.create_all(bind=engine)
 app = FastAPI()
