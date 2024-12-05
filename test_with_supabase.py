@@ -1,8 +1,8 @@
-from fastapi import FastAPI, HTTPException
-from supabase import create_client, Client
-from pydantic import BaseModel
+from fastapi import FastAPI, HTTPException # type: ignore
+from supabase import create_client, Client # type: ignore
+from pydantic import BaseModel # type: ignore
 from typing import List, Optional
-from dotenv import load_dotenv
+from dotenv import load_dotenv # type: ignore
 import os
 
 # Load environment variables
