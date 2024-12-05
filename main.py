@@ -7,6 +7,7 @@ from controllers import create_item, read_item, read_items, update_item, delete_
 from fastapi.middleware.cors import CORSMiddleware # type: ignore
 
 Base.metadata.create_all(bind=engine)
+
 app = FastAPI()
 
 origins = [
@@ -40,3 +41,4 @@ def update_item_route(item_id: int, item: ItemCreate, db: Session = Depends(get_
 @app.delete('/test/{item_id}')
 def delete_item_route(item_id: int, db:Session = Depends(get_db)):
     return delete_item(item_id, db)
+
